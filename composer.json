@@ -1,0 +1,23 @@
+{
+  "name": "schmiddim/amazon-asin-fetcher",
+  "description": "",
+  "homepage": "http://www.radikalblogger.de",
+  "license": "GPL-3.0",
+  "autoload": {
+    "psr-0": {"Amazon\\": "./src"}
+  },
+  "description": "Parse ASINS from urls",
+  "authors": [
+    {
+      "name": "Michael Schmitt",
+      "email": "schmiddim@gmx.at"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.8.6"
+  }
+}
