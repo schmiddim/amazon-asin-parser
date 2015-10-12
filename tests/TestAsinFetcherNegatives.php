@@ -10,7 +10,7 @@ class TestAsinFetcherNegatives extends PHPUnit_Framework_TestCase
 
         $this->setExpectedException('\Amazon\Exceptions\InvalidDomainException');
         $url = 'http://www.amazon.de';
-        $fetcher = new \Amazon\AsinFetcher($url);
+        $fetcher = new \Amazon\AsinParser($url);
         echo $fetcher->getAsin();
     }
 
@@ -18,7 +18,7 @@ class TestAsinFetcherNegatives extends PHPUnit_Framework_TestCase
     {
         $this->setExpectedException('\Amazon\Exceptions\InvalidAsinException');
         $url = 'http://www.amazon.de/blabla';
-        $fetcher = new \Amazon\AsinFetcher($url);
+        $fetcher = new \Amazon\AsinParser($url);
         echo $fetcher->getAsin();
     }
 
@@ -26,7 +26,7 @@ class TestAsinFetcherNegatives extends PHPUnit_Framework_TestCase
     {
         $this->setExpectedException('\Amazon\Exceptions\InvalidDomainException');
         $url = 'http://www.googl.de/dp/3836227622/';
-        $fetcher = new \Amazon\AsinFetcher($url);
+        $fetcher = new \Amazon\AsinParser($url);
         echo $fetcher->getAsin();
     }
 
@@ -34,7 +34,7 @@ class TestAsinFetcherNegatives extends PHPUnit_Framework_TestCase
     {
         $this->setExpectedException('\Amazon\Exceptions\InvalidAsinException');
         $url = 'http://www.amazon.de/dp/3836220007622/';
-        $fetcher = new \Amazon\AsinFetcher($url);
+        $fetcher = new \Amazon\AsinParser($url);
         echo $fetcher->getAsin();
     }
 

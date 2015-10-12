@@ -9,7 +9,7 @@ use Amazon\Exceptions\InvalidDomainException;
  * @see https://de.wikipedia.org/wiki/Amazon_Standard_Identification_Number
  * @package Amazon
  */
-class AsinFetcher
+class AsinParser
 {
 
     /**
