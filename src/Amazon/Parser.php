@@ -8,6 +8,7 @@
 namespace Amazon;
 
 use Amazon\Exceptions\InvalidDomainException;
+
 abstract class Parser
 {
     /**
