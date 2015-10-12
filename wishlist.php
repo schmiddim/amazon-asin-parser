@@ -1,5 +1,4 @@
 <?php
-
 // Requiring composer autoloader (local or global)
 foreach ([__DIR__ . '/../../autoload.php', __DIR__ . '/vendor/autoload.php'] as $file) {
     if (file_exists($file) &&!defined('COMPOSER_AUTOLOADER') ) {
@@ -16,7 +15,6 @@ if (!defined('COMPOSER_AUTOLOADER')) {
 }
 require COMPOSER_AUTOLOADER;
 
+$url ='http://www.amazon.de/gp/registry/wishlist/3PNTY4VFL6H2Q/ref=cm_wl_rlist_go_o?';
 
-$url = 'http://www.amazon.co.uk/dp/3836227622/ref=wl_it_dp_v_S_ttl/275-8449783-2161748?_encoding=UTF8&colid=3PNTY4VFL6H2Q&coliid=I1MY7ZKTP1IFRJ';
-$fetcher = new \Amazon\AsinParser($url);
-echo $fetcher->getAsin() . PHP_EOL;
+$wishlistParser = new \Amazon\WishlistParser($url);
