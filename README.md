@@ -12,7 +12,7 @@ run composer install
 
 
 ##Composer
-You can use the library in your projects with [composer](https://packagist.org/packages/schmiddim/amazon-asin-fetcher)
+You can use the library in your projects with [composer](https://getcomposer.org/)
 
 
 
