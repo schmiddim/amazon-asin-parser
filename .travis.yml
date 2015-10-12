@@ -13,10 +13,10 @@ before_script:
   - composer install
 
 script:
-  - phpunit -c build/phpunit.xml
+  - phpunit -c phpunit.xml
 
 build:
     tests:
         override:
             -
-                command: 'phpunit -c phpunit.xml --coverage-clover=some-file'
+                command: 'phpunit.phar -c phpunit.xml --coverage-clover=some-file'
