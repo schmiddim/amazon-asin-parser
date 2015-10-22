@@ -1,7 +1,7 @@
 <?php
 
 // Requiring composer autoloader (local or global)
-foreach ([__DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php'] as $file) {
+foreach ([__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php'] as $file) {
     if (file_exists($file) && !defined('COMPOSER_AUTOLOADER')) {
         define('COMPOSER_AUTOLOADER', $file);
         break;
@@ -15,6 +15,7 @@ if (!defined('COMPOSER_AUTOLOADER')) {
     );
 }
 require COMPOSER_AUTOLOADER;
+
 
 class TestAsinFetcherPositives extends PHPUnit_Framework_TestCase
 {
