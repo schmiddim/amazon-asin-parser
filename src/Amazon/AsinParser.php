@@ -41,6 +41,17 @@ class AsinParser extends Parser
         if (false === array_key_exists(2, $pathParts)) {
             throw new InvalidAsinException(sprintf('Url %s has no ASIN', $this->getUrl()));
         }
+
+        foreach($pathParts as  $index => $part) {
+            if(strlen($part) === self::LENGTH_ASIN) {
+                if(array_key_exists($index-1, $pathParts) && $pathParts[$index-1] ==='dp') {
+                    $this->setAsin($part);
+                    return;
+                }
+
+            }
+        }
+
         if (strlen($pathParts[2]) !== self::LENGTH_ASIN) {
             throw new InvalidAsinException(sprintf('Url %s has no valid ASIN', $this->getUrl()));
 

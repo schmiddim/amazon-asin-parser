@@ -42,6 +42,12 @@ abstract class Parser
     {
 
         $this->url = $url;
+		//Question Marks
+        if(preg_match('/%3F/', $url)) {
+            $this->url = substr($url, 0, strpos($url, "%3F"));
+
+        }
+
         $urlParameter = parse_url($this->getUrl());
         $this->processUrl($urlParameter);
         $this->processTld($urlParameter['host']);
