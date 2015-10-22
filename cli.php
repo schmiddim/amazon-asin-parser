@@ -2,7 +2,7 @@
 
 // Requiring composer autoloader (local or global)
 foreach ([__DIR__ . '/../../autoload.php', __DIR__ . '/vendor/autoload.php'] as $file) {
-    if (file_exists($file) &&!defined('COMPOSER_AUTOLOADER') ) {
+    if (file_exists($file) && !defined('COMPOSER_AUTOLOADER')) {
         define('COMPOSER_AUTOLOADER', $file);
         break;
     }

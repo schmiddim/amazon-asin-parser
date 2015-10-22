@@ -4,7 +4,9 @@
   "homepage": "http://www.radikalblogger.de",
   "license": "GPL-3.0",
   "autoload": {
-    "psr-0": {"Amazon\\": "./src"}
+    "psr-0": {
+      "Amazon\\": "./src"
+    }
   },
   "description": "Parse ASINS from urls",
   "authors": [

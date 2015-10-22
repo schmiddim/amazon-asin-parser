@@ -42,8 +42,8 @@ abstract class Parser
     {
 
         $this->url = $url;
-		//Question Marks
-        if(preg_match('/%3F/', $url)) {
+        //Question Marks
+        if (preg_match('/%3F/', $url)) {
             $this->url = substr($url, 0, strpos($url, "%3F"));
 
         }

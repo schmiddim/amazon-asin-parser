@@ -1,7 +1,7 @@
 <?php
 // Requiring composer autoloader (local or global)
 foreach ([__DIR__ . '/../../autoload.php', __DIR__ . '/vendor/autoload.php'] as $file) {
-    if (file_exists($file) &&!defined('COMPOSER_AUTOLOADER') ) {
+    if (file_exists($file) && !defined('COMPOSER_AUTOLOADER')) {
         define('COMPOSER_AUTOLOADER', $file);
         break;
     }
@@ -15,6 +15,6 @@ if (!defined('COMPOSER_AUTOLOADER')) {
 }
 require COMPOSER_AUTOLOADER;
 
-$url ='http://www.amazon.de/gp/registry/wishlist/3PNTY4VFL6H2Q/ref=cm_wl_rlist_go_o?';
+$url = 'http://www.amazon.de/gp/registry/wishlist/3PNTY4VFL6H2Q/ref=cm_wl_rlist_go_o?';
 
 $wishlistParser = new \Amazon\WishlistParser($url);

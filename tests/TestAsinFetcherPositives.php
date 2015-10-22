@@ -22,7 +22,7 @@ class TestAsinFetcherPositives extends PHPUnit_Framework_TestCase
 
     public function testAsinShifted()
     {
-        $url='http://www.amazon.de/Bose-SoundLink-Colour-Bluetooth-Lautsprecher/dp/B00M7Y0GJ2%3Fpsc%3D1%26SubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00M7Y0GJ2';
+        $url = 'http://www.amazon.de/Bose-SoundLink-Colour-Bluetooth-Lautsprecher/dp/B00M7Y0GJ2%3Fpsc%3D1%26SubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00M7Y0GJ2';
         $fetcher = new \Amazon\AsinParser($url);
 
 
