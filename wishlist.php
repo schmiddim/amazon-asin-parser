@@ -4,7 +4,7 @@ foreach ([__DIR__ . '/../../autoload.php', __DIR__ . '/vendor/autoload.php'] as 
     if (file_exists($file) && !defined('COMPOSER_AUTOLOADER')) {
         define('COMPOSER_AUTOLOADER', $file);
         break;
-    }
+     }
 }
 if (!defined('COMPOSER_AUTOLOADER')) {
     die(
