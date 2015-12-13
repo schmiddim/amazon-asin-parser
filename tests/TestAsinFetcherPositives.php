@@ -34,10 +34,14 @@ class TestAsinFetcherPositives extends PHPUnit_Framework_TestCase
     {
         $url = 'http://www.amazon.de/dp/3836227622/ref=wl_it_dp_v_S_ttl/275-8449783-2161748?_encoding=UTF8&colid=3PNTY4VFL6H2Q&coliid=I1MY7ZKTP1IFRJ';
         $fetcher = new \Amazon\AsinParser($url);
-
-
         $this->assertEquals('de', $fetcher->getTld());
         $this->assertEquals('3836227622', $fetcher->getAsin());
+
+        $url = 'http://www.amazon.de/dp/B009SLYYCW/?tag=nhwhd-21';
+        $fetcher = new \Amazon\AsinParser($url);
+        $this->assertEquals('de', $fetcher->getTld());
+        $this->assertEquals('B009SLYYCW', $fetcher->getAsin());
+        $this->assertEquals('http://www.amazon.de/dp/B009SLYYCW/', $fetcher->getCleanedUrl());
     }
 
     public function testUk()
@@ -61,6 +65,8 @@ class TestAsinFetcherPositives extends PHPUnit_Framework_TestCase
         $fetcher = new \Amazon\AsinParser($url);
         $this->assertEquals('co.uk', $fetcher->getTld());
         $this->assertEquals('B014UIWGN6', $fetcher->getAsin());
+        $this->assertEquals('http://www.amazon.co.uk/dp/B014UIWGN6/', $fetcher->getCleanedUrl());
+
 
     }
 }

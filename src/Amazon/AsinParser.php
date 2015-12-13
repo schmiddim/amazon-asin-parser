@@ -76,4 +76,11 @@ class AsinParser extends Parser
     {
         $this->asin = $asin;
     }
+
+    /**
+     * @return string
+     */
+    public function getCleanedUrl() {
+        return sprintf('http://www.amazon.%s/dp/%s/', $this->getTld(), $this->getAsin());
+    }
 }
