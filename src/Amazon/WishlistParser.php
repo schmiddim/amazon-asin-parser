@@ -7,37 +7,41 @@
 
 namespace Amazon;
 
-
+/**
+ * Class WishlistParser
+ * @deprecated
+ * @package Amazon
+ */
 class WishlistParser extends Parser
 {
-    /**
-     * @var null
-     */
-    private $wishlistId = null;
+	/**
+	 * @var null
+	 */
+	private $wishlistId = null;
 
-    public function __construct($url)
-    {
-        parent::__construct($url);
-        $urlParameter = parse_url($this->getUrl());
+	public function __construct($url)
+	{
+		parent::__construct($url);
+		$urlParameter = parse_url($this->getUrl());
 
-        $this->processWishListUrl($urlParameter);
-    }
+		$this->processWishListUrl($urlParameter);
+	}
 
-    protected function processWishListUrl($urlParameter)
-    {
-        $paramArray = explode('/', $urlParameter['path']);
+	protected function processWishListUrl($urlParameter)
+	{
+		$paramArray = explode('/', $urlParameter['path']);
 
-        $this->wishlistId = $paramArray[4];
+		$this->wishlistId = $paramArray[4];
 
-    }
+	}
 
-    /**
-     * @return null
-     */
-    public function getWishlistId()
-    {
-        return $this->wishlistId;
-    }
+	/**
+	 * @return null
+	 */
+	public function getWishlistId()
+	{
+		return $this->wishlistId;
+	}
 
 
 }
