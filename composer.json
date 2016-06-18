@@ -1,6 +1,5 @@
 {
   "name": "schmiddim/amazon-asin-fetcher",
-  "description": "",
   "homepage": "http://www.radikalblogger.de",
   "license": "GPL-3.0",
   "autoload": {
